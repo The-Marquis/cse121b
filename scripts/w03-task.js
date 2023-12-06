@@ -58,7 +58,7 @@ function calculateTotal(){
     if (document.querySelector('#member')){
         numericValue -= numericValue *0.15;
     }
-    document.querySelector('#total').value = numericValue;
+    document.querySelector('#total').innerHTML = '$'+ numericValue;
 }
 
 document.querySelector('#getTotal').addEventListener('click', calculateTotal);
@@ -83,4 +83,9 @@ document.querySelector('#sumOfArray').innerHTML = array.reduce((sum, num) => sum
 document.querySelector('#multiplied').innerHTML = array.map(num => num*2);
 
 /* Output Sum of Multiplied by 2 Array */
-document.querySelector('#sumOfmultiplied').innerHTML = array.map(num => num*2).reduce((sum, num) => sum + num);
+
+function getSumOfMultiplied(array){
+    multipliedArray = array.map(num => num*2);
+    return multipliedArray.reduce((sum, num) => sum + num)
+}
+document.querySelector('#sumOfMultiplied').innerHTML = getSumOfMultiplied(array);
