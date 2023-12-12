@@ -1,23 +1,43 @@
 [
     {
-        "text" : "HEar the voice of an angel, he's calling for you",
+        "category" : "song",
+        "text" : "Hear the voice of an angel, he's calling for you",
         "person" : "Freedom Call"
     },
     {
+        "category" : "song",
         "text" : "When you think all is forsaken, listen to me now. You need never feel broken again. Sometimes darkness can show you the light",
         "person" : "disturbed"
     },
     {
+        "category" : "song",
         "text" : "Rise up and conquer the world!",
         "person" : "Alestorm"
     },
     {
+        "category" : "song",
         "text" : "Let the good times rock the nation, keep the bad times out of sight.",
         "person" : "Freedom call"
     },
     {
+        "category" : "song",
         "text" : "With dreams to be a king, first one should be a Man",
         "person" : "Manowar"
+    },
+    {
+        "category" : "book",
+        "text" : "Unless there's someone like you who cares an awful lot, nothing's going to get better. It's not",
+        "person" : "The Onceler, Dr. Suess"
+    },
+    {
+        "category" : "book",
+        "text" : "Deeds will not be less valiant because they are unpraised.",
+        "person" : "Aragorn, J.R.R Tolkien"
+    },
+    {
+        "category" : "book",
+        "text" : "It is the duty of those with strength to do something to act.",
+        "person" : "Tyrranus, Marquis Jackson (not a book, but a game)"
     }
 
 ]

@@ -6,19 +6,19 @@ let quotesList = [];
 
 /* ping API */
 const getQuotes = async () => {
-    const response = await fetch('https://run.mocky.io/v3/b06a7510-15aa-40ef-ae9d-f81e23de780c');
+    const response = await fetch('https://run.mocky.io/v3/b93544ba-fb73-4975-993b-3179b5720873');
     quotesList = await response.json();
     console.log(quotesList);
-    displayQuote(quotes);
+    displayQuote(quotesList);
 
 }
 /* make file usable */
 
 /* create quote as an article on quotes element*/
 
-const displayQuote = () => {
+const displayQuote = (quotes) => {
     reset();
-    quote = quotesList[randomInt(quotesList.length)];
+    quote = quotes[randomInt(quotes.length)];
     console.log(quote);
     let article = document.createElement('article');
        
@@ -40,13 +40,38 @@ const reset = () => {
     }
 }
 
+function filterQuote(filter) {
+    let filteredList = [];
+    switch(filter) {
+        case 'song':
+            quotesList.forEach((quote) => {
+                if (quote["category"] == "song") {
+                    filteredList.push(quote);
+                }
+            })
+            displayQuote(filteredList);
+
+            break;
+        case 'book':
+            quotesList.forEach((quote) => {
+                if (quote["category"] == "book") {
+                    filteredList.push(quote);
+                }
+            })
+            displayQuote(filteredList);
+            break;
+        default:
+            displayQuote(quotesList);
+    }
+}
+
 
 /* other */
 
 function randomInt(max) {
-    return Math.floor(Math.random() * (max-1));
+    return Math.floor(Math.random() * (max));
 }
 
 /* main */
 getQuotes();
-document.querySelector('#getQuote').addEventListener("click", () => {displayQuote()});
+document.querySelector('#getQuote').addEventListener("click", () => {filterQuote(document.getElementById("sortBy").value)});

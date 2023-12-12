@@ -26,8 +26,14 @@
   </nav>
   <main id="gridly">
     <h1>Project</h1>
-    <h2>Song Quote retrieval</h2>
+    <h2>Random quote finder</h2>
 
+    <select id="sortBy" title="Choose a data filter.">
+        <option value="" disabled selected>Filter Quote Category</option>
+        <option value="song">Song Quote</option>
+        <option value="book">Book Quote</option>
+        <option value="">Any</option>
+      </select>
     <button id="getQuote">Get Quote</button>
 
     <div id="quotes">
